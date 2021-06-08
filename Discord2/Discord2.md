@@ -24,3 +24,22 @@ Website: [FreedomCTF](https://freedomctf.org/)
     * *&&assignrole 1* which returns: "No roles for you! 😝"
     * *You will want to brute force this and when you do "&&assignrole 15" you will get a direct message saying: Might want to check your roles? 😉"
     * *When you check your role list, you will see a role named, "Flag Receivers" and will have access to a hidden text channel named, "flags". In there is the flag, "flag{s33ds_4re_FuN!}."*
+
+### Code in the bot:
+
+    import random
+
+    def flag(arg):
+    random.seed(arg)
+    for i in range(20):
+        random.randint(1,500)
+
+    if random.randint(1,500) == 174:
+        print(arg)
+        return None
+
+
+    for i in range(50):
+    flag(i)
+
+    
